@@ -15,6 +15,16 @@ public class Administrator {
 		super();
 	}
 	
+	public Administrator(Integer id, String name, String mailAddres, String password) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.mailAddres = mailAddres;
+		this.password = password;
+	}
+
+
+
 	public Integer getId() {
 		return id;
 	}
