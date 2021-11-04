@@ -21,4 +21,8 @@ public class EmployeeService {
 		return repository.findAll();
 	}
 	
+	public Employee showDetail(Integer id) {
+		return repository.load(id);
+	}
+	
 }

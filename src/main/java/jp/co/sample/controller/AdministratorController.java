@@ -70,7 +70,7 @@ public class AdministratorController {
 			//return "redirect:/";
 		}
 		session.setAttribute("administratorName", administrator.getName());
-		return "forward:/emplyee/showList";
+		return "forward:/employee/showList";
 		
 	}
 	
