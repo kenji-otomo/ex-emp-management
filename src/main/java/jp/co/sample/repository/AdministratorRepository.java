@@ -63,7 +63,7 @@ public class AdministratorRepository {
 	 * @param password
 	 * @return　検索された管理者情報　一件だとは思うけど一応リストにした
 	 */
-	public List<Administrator> findByMailAddressAndPassword(String mailAddress,String password) {
+	public Administrator findByMailAddressAndPassword(String mailAddress,String password) {
 		
 		String sql = "SELECT id,name,mail_address,password FROM administrators WHERE mail_address = :mailAddress AND password = :password ;";
 		
@@ -75,7 +75,7 @@ public class AdministratorRepository {
 			return null;
 		}
 		
-		return adminList;
+		return adminList.get(0);
 	}
 	
 }

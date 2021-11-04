@@ -29,8 +29,8 @@ public class sampleController {
 	@RequestMapping("/result")
 	public String result(String mailAddress,String password) {
 		
-		List<Administrator>list = service.findByMailAddressAndPassword(mailAddress, password);
-		System.out.println(list);
+		Administrator ad = service.login(mailAddress, password);
+		System.out.println(ad);
 		
 		return "administrator/login2";
 	}

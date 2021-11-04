@@ -1,6 +1,5 @@
 package jp.co.sample.service;
 
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,7 +19,7 @@ public class AdministratorService {
 		administratorRepository.insert(administrator);
 	}
 	
-	public List<Administrator> findByMailAddressAndPassword(String mailAddress,String password) {
+	public Administrator login(String mailAddress,String password) {
 		return administratorRepository.findByMailAddressAndPassword(mailAddress, password);
 	}
 }
