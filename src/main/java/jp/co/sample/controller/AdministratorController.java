@@ -67,6 +67,7 @@ public class AdministratorController {
 			
 			model.addAttribute("message", "メールアドレスまたはパスワードが不正です。");
 			return "administrator/login";
+			//return "redirect:/";
 		}
 		session.setAttribute("administratorName", administrator.getName());
 		return "forward:/emplyee/showList";
