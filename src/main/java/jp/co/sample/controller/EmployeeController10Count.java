@@ -27,20 +27,20 @@ public class EmployeeController10Count {
 		
 		List<Employee>employeeList = service.showList();
 		
+		int count = 0;
 		for (int i = 0;i < employeeList.size(); i++) {
 			
-			for (int j = 0; j < 10; j++) {
+			for (int j = 0; j < 2; j++) {
 				
-				int count = 0;
 				emListChaild.add(employeeList.get(j + count));
-				count = count + 10;
+				count = count + 2;
 			}
 			
 			employeeListParent.add(i,emListChaild);
 			emListChaild = new ArrayList<>();
 		}
 		
-		System.out.println(employeeListParent.get(0));
+		System.out.println(employeeListParent.get(1));
 		model.addAttribute("employeeListParent", employeeListParent);
 		
 		return "employee/list";
