@@ -80,4 +80,10 @@ public class AdministratorController {
 		return "administrator/login";
 	}
 	
+	@RequestMapping("/logout")
+	public String logout() {
+		session.invalidate();
+		return "redirect:/";
+	}
+	
 }
