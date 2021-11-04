@@ -32,7 +32,7 @@ public class AdministratorRepository {
 				Administrator administrator = new Administrator();
 				administrator.setId(rs.getInt("id"));
 				administrator.setName(rs.getString("name"));
-				administrator.setMailAddres(rs.getString("mail_address"));
+				administrator.setMailAddress(rs.getString("mail_address"));
 				administrator.setPassword(rs.getString("password"));
 				return administrator;
 			};
@@ -49,7 +49,7 @@ public class AdministratorRepository {
 	 */
 	public void insert(Administrator administrator) {
 		String sql = "INSERT INTO administrators (name,mail_address,password) "
-				+ "VALUES (:name,:mail_address,:password);";
+				+ "VALUES (:name,:mailAddress,:password);";
 		
 		SqlParameterSource param = new BeanPropertySqlParameterSource(administrator);
 		
